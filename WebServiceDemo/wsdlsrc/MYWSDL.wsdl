@@ -1,0 +1,3540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions
+
+	xmlns:tns="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+	xmlns:wsr="http://www.openuri.org/2002/10/soap/reliability/"
+
+	xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+
+	xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+
+	xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+
+	xmlns:s="http://www.w3.org/2001/XMLSchema"
+
+	xmlns="http://schemas.xmlsoap.org/wsdl/"
+
+	targetNamespace="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01">
+	<types>
+		<xs:schema
+
+			xmlns:tns="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns:S832="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/OperationalAnalysis"
+
+			xmlns:S865="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Parties"
+
+			xmlns:S798="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses"
+
+			xmlns:S93="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Troubles"
+
+			xmlns:S31="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Specifications"
+
+			xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+
+			xmlns:S62="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Parties"
+
+			xmlns:S824="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Interaction"
+
+			xmlns:S816="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Incidents"
+
+			xmlns:S885="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Users"
+
+			xmlns:ns1="http://schemas.xmlsoap.org/soap/encoding/"
+
+			xmlns:S7="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02"
+
+			xmlns:S801="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations"
+
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:S895="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns:S872="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Resources"
+
+			xmlns:S9="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns="http://schemas.xmlsoap.org/wsdl/"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Users">
+			<xs:complexType name="ClientIdentifier">
+				<xs:sequence>
+					<xs:element type="xs:string" name="value">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema
+
+			xmlns:tns="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns:S832="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/OperationalAnalysis"
+
+			xmlns:S865="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Parties"
+
+			xmlns:S798="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses"
+
+			xmlns:S93="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Troubles"
+
+			xmlns:S31="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Specifications"
+
+			xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+
+			xmlns:S62="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Parties"
+
+			xmlns:S824="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Interaction"
+
+			xmlns:S816="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Incidents"
+
+			xmlns:S885="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Users"
+
+			xmlns:ns1="http://schemas.xmlsoap.org/soap/encoding/"
+
+			xmlns:S7="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02"
+
+			xmlns:S801="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations"
+
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:S895="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns:S872="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Resources"
+
+			xmlns:S9="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns="http://schemas.xmlsoap.org/wsdl/"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Incidents">
+			<xs:complexType name="Fault">
+				<xs:sequence>
+					<xs:element type="xs:string" name="reasonCode"
+
+						minOccurs="0">
+					</xs:element>
+					<xs:element type="xs:string" name="reasonCodeText"
+
+						minOccurs="0">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema
+
+			xmlns:tns="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns:S832="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/OperationalAnalysis"
+
+			xmlns:S865="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Parties"
+
+			xmlns:S798="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses"
+
+			xmlns:S93="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Troubles"
+
+			xmlns:header="http://wsi.nat.bt.com/2005/06/StandardHeader/"
+
+			xmlns:S31="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Specifications"
+
+			xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+
+			xmlns:S62="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Parties"
+
+			xmlns:S824="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Interaction"
+
+			xmlns:S41="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Interaction"
+
+			xmlns:S816="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Incidents"
+
+			xmlns:S885="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Users"
+
+			xmlns:S7="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02"
+
+			xmlns:S801="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations"
+
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:S895="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns:S872="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Resources"
+
+			xmlns:S988="http://www.bt.com/generic/"
+
+			xmlns:S9="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns:S15="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/RRT_OR_RESPONSE_V1"
+
+			xmlns:dtr="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/gtcs/diagTestDetails"
+
+			xmlns="http://www.w3.org/2001/XMLSchema"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified"
+
+			targetNamespace="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02">
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Specifications">
+			</xs:import>
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Troubles">
+			</xs:import>
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Interaction">
+			</xs:import>
+			<xs:import namespace="http://www.bt.com/generic/">
+			</xs:import>
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/RRT_OR_RESPONSE_V1" />
+
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/gtcs/diagTestDetails" />
+
+			<xs:complexType name="Identifier">
+				<xs:sequence>
+					<xs:element type="xs:string" name="type"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:string" name="value"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="DetailedOutput">
+				<xs:sequence>
+					<xs:element type="S31:Instance"
+
+						name="decomposedInventoryList" minOccurs="1"
+
+						maxOccurs="unbounded">
+					</xs:element>
+					<xs:element type="S93:Issue" name="arIssue"
+
+						minOccurs="0" maxOccurs="unbounded" nillable="true">
+					</xs:element>
+					<xs:element type="S93:Issue" name="ieIssue"
+
+						minOccurs="0" maxOccurs="unbounded" nillable="true">
+					</xs:element>
+					<xs:element type="S93:Issue" name="crIssue"
+
+						minOccurs="0" maxOccurs="unbounded" nillable="true">
+					</xs:element>
+					<xs:element type="S93:Impact" name="impact"
+
+						minOccurs="0" maxOccurs="unbounded" nillable="true">
+					</xs:element>
+					<xs:element type="xs:int" name="impactScore"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Result">
+				<xs:sequence>
+					<xs:element type="S41:BusinessInteractionOutcome"
+
+						name="associationOutcome" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element type="S7:DetailedOutput"
+
+						name="detailedOutput" minOccurs="0" maxOccurs="1"
+
+						nillable="true">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="TestResultParam">
+				<xs:sequence>
+					<xs:element type="xs:string" name="name">
+					</xs:element>
+					<xs:element type="xs:string" name="value">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Results">
+				<xs:sequence>
+					<xs:element type="S7:TestResultParam"
+
+						name="testResultParameter" maxOccurs="unbounded">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="TestResult">
+				<xs:sequence>
+					<xs:element type="xs:string" name="testType">
+					</xs:element>
+					<xs:element type="S7:Results" name="result">
+					</xs:element>
+					<xs:element name="SubtestResult" type="S7:TestResult" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation>Sub Test is of type TestResult and hence could have multiple level of child tags.
+							Only one level of sub test will be consumed as part of R2750 ORCE:59788</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Device">
+				<xs:sequence>
+					<xs:element type="xs:string" name="name">
+					</xs:element>
+					<xs:element type="xs:string" name="side">
+					</xs:element>
+					<xs:element type="S7:TestResult" name="testResult"
+
+						maxOccurs="unbounded">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="AnyResult">
+				<xs:choice>
+					<xs:element type="S7:Result"
+
+						name="AssociationResult" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element type="S7:DiagnosticResult"
+
+						name="DiagnosticResult" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element type="S15:RESPONSE_TYPE"
+
+						name="RRT_RESULT" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<!-- <xs:element type="S988:GenericTestType"
+
+						name="genericTest" minOccurs="0" maxOccurs="1">
+					</xs:element>
+ -->
+					<xs:element ref="S988:genericTest" />
+					<xs:element ref="dtr:diagnosticTestDetails" />
+
+				</xs:choice>
+			</xs:complexType>
+			<xs:complexType name="DiagnosticResult">
+				<xs:sequence>
+					<xs:element type="S7:Device" name="device"
+
+						minOccurs="0" maxOccurs="unbounded">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema targetNamespace="http://rrt.nat.bt.com/RRTOR/Request"
+
+			xmlns:rrtreq="http://rrt.nat.bt.com/RRTOR/Request"
+
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+			<xs:element name="RRT_REQUEST" type="rrtreq:REQUEST_Type">
+				<xs:annotation>
+					<xs:documentation>
+						Request received from GTC.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:complexType name="REQUEST_Type">
+				<xs:sequence>
+					<xs:element name="SERVICE_ID" type="xs:string">
+						<xs:annotation>
+							<xs:documentation>
+								This denotes the Service ID of the
+								circuit to be analysed. It should be of
+								the form OGEA###### where # corresponds
+								to a digit from 0-9.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="REQ_FRC" type="xs:string"
+
+						minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+								Optional Element. This is the FRC with
+								which GTC executes the RRT test.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="QUERY_DATE" type="xs:dateTime"
+
+						minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+								This is the date on which GTC queries
+								RRT and from which RRT analyses the
+								data. This is optional. If RRT does not
+								receive the date, it will default it to
+								current date timestamp at which Request
+								is received from GTC.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="ADDITIONAL_REQ_PARAM"
+
+						type="xs:string" default="NA" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>
+								Optional Element. This is additional
+								Request parameter kept for future use.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns:rrtreq="http://rrt.nat.bt.com/RRTOR/Request"
+			xmlns:rrt="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/RRT_OR_RESPONSE_V1"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/RRT_OR_RESPONSE_V1"
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+			<xs:import namespace="http://rrt.nat.bt.com/RRTOR/Request" />
+			<xs:element name="RRT_RESPONSE" type="rrt:RESPONSE_TYPE">
+		<xs:annotation>
+			<xs:documentation>RRT Response sent to GTC</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="RESPONSE_TYPE">
+		<xs:sequence>
+			<xs:element name="RRT_RESPONSE_STATUS" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>Response Status from RRT with possible values of 0,1,2 and 3. 0 = Request Successful. 1 = Analysis not available. 2 = Invalid Request. 3 = RRT encountered some error. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="REQUEST" type="rrtreq:REQUEST_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Details of Request received from GTC</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
+			<xs:element name="DiagnosticResult" type="rrt:DiagnosticResult_Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Diagnosis Results.</xs:documentation>
+				</xs:annotation>
+			</xs:element>				
+			<xs:element name="ERROR_MESSAGE" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Error description in case of Request failure i.e. when RRT_RESPONSE_STATUS is other than 0 .</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DiagnosticResult_Type">
+		<xs:sequence>
+			<xs:element name="Analysis_Start_Date" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>This defines the start date of analysis period. For e.g. for 14 days analysis, this date would be the date of past 14th day and HH:MM:SS would be defaulted to 00:00:01.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Analysis_End_Date" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>This defines the end date of analysis period. For e.g. for 14 days analysis, this date would be the current date timestamp at the time of test.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RRT_RESPONSE_CODE" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>This defines the outcome of the RRT test to identify the fault condition observed by RRT. Example: DCN, NSC, NBS, TOK. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Device" type="rrt:Device_Type" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>This identifies the devices on which RRT analysis is done.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Device_Type">
+		<xs:sequence>
+			<xs:element name="Device_Details" type="rrt:Device_Details_Type">
+				<xs:annotation>
+					<xs:documentation>This identifies the details of a device (like device name, device sides and charateristics analysed).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Device_Details_Type">
+		<xs:sequence>
+			<xs:element name="Device_Name" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Name of the device diagnosed by RRT.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Device_Side_Details" type="rrt:Device_Side_Details_Type" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Device Side analysis.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Device_Side_Details_Type">
+		<xs:sequence>
+			<xs:element name="Device_Side" type="rrt:Device_Side_Type">
+				<xs:annotation>
+					<xs:documentation>Details of sides of the device (like name and charateristics analysed) diagnosed by RRT.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Device_Side_Type">
+		<xs:sequence>
+			<xs:element name="Device_Side_Name" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Side of the device (like D or E) diagnosed by RRT.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Device_Additional_Detail" type="xs:string" default="NA" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Any additional details of the device like port detail etc. Kept for future use.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Device_Characteristics_Details" type="rrt:Device_Characteristics_Details_Type" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Details of the device characteristics analysed by RRT. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Device_Characteristics_Details_Type">
+		<xs:sequence>
+			<xs:element name="Device_Characteristics_Name" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Name of characteristic analysed.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Analysis" type="rrt:Analysis_Type">
+				<xs:annotation>
+					<xs:documentation>Characteristic Analysis.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Analysis_Type">
+		<xs:sequence>
+			<xs:element name="Granularity_Level_Analysis" type="rrt:Granularity_Level_Analysis_Type" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Segregates the analysis based on level of granularity like daily/periodic etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Granularity_Level_Analysis_Type">
+		<xs:sequence>
+			<xs:element name="Granularity_Level_Name" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Level of Granularity like Daily, Periodic etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Granular_Analysis" type="rrt:Granular_Analysis_Type" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Analysis available at different granularities like at Daily or Periodic level etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Granular_Analysis_Type">
+		<xs:sequence>
+			<xs:element name="Analysis_Date_Time_Stamp" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>Start date timestamp of the analysis. For Daily analysis value would be the date of the day for which analysis is done and HH:MM:SS would be defaulted to 00:00:01. For Periodic analysis, Date would be corresponding to the past 14th (or Number of days over which analysis is carried out) and again HH:MM:SS would be defaulted to 00:00:01.  </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Parameter_Analysis" type="rrt:Parameter_Analysis_Type" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Parameter level analysis.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+				<xs:element name="BRANDENBURG_ADDITIONAL_INFO" type="rrt:BB_ADDITIONAL_INFO" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Name of the parameters to be detacted/Not detecteds.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Parameter_Analysis_Type">
+		<xs:sequence>
+			<xs:element name="Parameter_Name" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Name of Parameter that is analysed like Downstream Line Rate.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Parameter_Result" type="rrt:Parameter_Result_Type">
+				<xs:annotation>
+					<xs:documentation>Results/analysis for the parameter .</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Parameter_Result_Type">
+		<xs:sequence>
+			<xs:element name="Parameter_Attribute" type="rrt:Parameter_Attribute_Type" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Attribute level analysis.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Parameter_Attribute_Type">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Attribute name like MIN, MAX, Message etc.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="value" type="xs:string" default="-1">
+				<xs:annotation>
+					<xs:documentation>Attribute value. Value would be defaulted to -1 in case not available.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>		
+	</xs:complexType>
+	<xs:complexType name="BB_ADDITIONAL_INFO">
+		<xs:sequence>
+		<xs:element name="Bridge_Tap" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Parameter value.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Radio_Frequency_Ingress" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Parameter value.</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
+			<xs:element name="Repetitive_Electrical_Impulse_Noise" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Parameter value.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Cross_Talk" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Parameter value.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:tns="http://www.bt.com/generic/"
+
+			targetNamespace="http://www.bt.com/generic/"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+			<xs:element name="genericTest"
+				type="tns:GenericTestType">
+		        </xs:element>		
+			<xs:complexType name="GenericTestType">
+				<xs:sequence>
+					<xs:element name="testID" type="xs:long"
+
+						nillable="true" minOccurs="0" />
+					<xs:element name="service" type="tns:Service"
+
+						nillable="true" minOccurs="0" />
+					<xs:element name="analysis" type="tns:Analysis" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Service">
+				<xs:sequence>
+					<xs:element name="serviceAEnd"
+
+						type="tns:ServiceEnds" />
+					<xs:element name="serviceEnds"
+
+						type="tns:ServiceEnds" minOccurs="0" maxOccurs="unbounded" />
+					<xs:element name="serviceBEnd"
+
+						type="tns:ServiceEnds" minOccurs="0" />
+					<xs:element name="serviceType" type="xs:string"
+
+						minOccurs="0" />
+					<xs:element name="subServiceId" type="xs:string"
+
+						minOccurs="0" />
+					<xs:element name="serviceId" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+					<xs:element name="testCategory" type="xs:string" />
+					<xs:element name="serviceCharacteristicList"
+
+						type="tns:serviceCharacteristicList" minOccurs="0" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ServiceEnds">
+				<xs:sequence>
+					<xs:element name="serviceEndId" type="xs:string"
+
+						minOccurs="0" />
+					<xs:element name="equipment" type="tns:Equipment" />
+					<xs:element name="analysis" type="tns:Analysis"
+
+						minOccurs="0" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Equipment">
+				<xs:sequence>
+					<!-- objectType contains mtosi level information like connectionTerminationPoint, 
+
+						physicalTermination.
+
+						This limits the level of mtosi details
+
+					-->
+					<xs:element name="objectType" type="xs:string"
+
+						nillable="false" minOccurs="0" />
+					<!-- mdNm name -->
+					<xs:element name="mdNm" type="xs:string"
+
+						nillable="false" />
+					<!-- netowrk id is element ip address -->
+					<!-- meNm name -->
+					<xs:element name="networkId" type="xs:string"
+
+						minOccurs="0" />
+					<!-- meNm -->
+					<xs:element name="meNm" type="xs:string" />
+					<!-- Node Type -->
+					<xs:element name="MEModel" type="xs:string"
+
+						nillable="false" minOccurs="0" />
+					<!-- element manager - EMS details -->
+					<xs:element name="elementManager"
+
+						type="tns:ElementManager" />
+					<!-- component information like ptpNm, ctpNm, details received after
+
+						test performed on the equipment
+
+					-->
+					<xs:element name="component" type="tns:Component"
+
+						maxOccurs="unbounded" />
+					<!-- anlaysis details like outcome codes, result codes -->
+					<xs:element name="analysis" type="tns:Analysis"
+
+						minOccurs="0" maxOccurs="unbounded" />
+				</xs:sequence>
+				<xs:attribute name="type" type="xs:string" />
+				<!-- Type of equipment like Alcaltel 7750, FSP 150 CP -->
+			</xs:complexType>
+			<xs:complexType name="ElementManager">
+				<xs:sequence>
+					<xs:element name="name" type="xs:string"
+
+						nillable="false" />
+					<xs:element name="supplierID" type="xs:string"
+
+						nillable="false" minOccurs="0" />
+					<xs:element name="version" type="xs:string"
+
+						nillable="false" minOccurs="0" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Component">
+				<xs:sequence>
+					<!-- MTOSI - 4 level changes-->
+					<xs:element name="mtosi_level"
+
+						type="tns:MtosiLevelEnum" />
+					<xs:element name="ctpnm" type="xs:string"
+
+						minOccurs="0" />
+					<xs:element name="BT_MTOSI_id" type="xs:string"
+
+						minOccurs="0" />
+					<xs:element name="supplier_id" type="xs:string"
+
+						minOccurs="0" />
+					<xs:element name="MECardModel" type="xs:string"
+
+						nillable="false" minOccurs="0" />
+					<xs:element name="capacity" type="xs:string"
+
+						nillable="false" minOccurs="0" />
+					<xs:element name="resultData"
+
+						type="tns:MetaDataList" nillable="true" minOccurs="0"
+
+						maxOccurs="unbounded" />
+					<xs:element name="faulty" type="xs:boolean"
+
+						default="false" />
+				</xs:sequence>
+				<xs:attribute name="type" type="xs:string" />
+			</xs:complexType>
+			<xs:simpleType name="Mtosi">
+				<xs:restriction base="xs:string" />
+			</xs:simpleType>
+			<xs:complexType name="MetaDataList">
+				<xs:sequence>
+					<xs:element name="metaData" type="tns:MetaData"
+
+						minOccurs="0" maxOccurs="unbounded" />
+				</xs:sequence>
+				<xs:attribute name="type" type="xs:string" />
+			</xs:complexType>
+			<xs:complexType name="MetaData">
+				<xs:sequence>
+					<xs:element name="name" type="xs:string"
+
+						nillable="false" />
+					<xs:element name="value" type="xs:string"
+
+						nillable="false" />
+				</xs:sequence>
+			</xs:complexType>
+			<!-- Ethernet Outcome -->
+			<xs:complexType name="Analysis">
+				<xs:sequence>
+					<xs:element name="code" type="xs:string" />
+					<xs:element name="outcome"
+
+						type="tns:EthernetOutcomeEnum" />
+					<xs:element name="description" type="xs:string"
+
+						minOccurs="0" />
+				</xs:sequence>
+				<xs:attribute name="type" type="xs:string" />
+			</xs:complexType>
+			<xs:simpleType name="EthernetOutcomeEnum">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Pass" />
+					<xs:enumeration value="Fail" />
+					<xs:enumeration value="Inconclusive" />
+					<xs:enumeration value="TimedOut" />
+					<xs:enumeration value="PrematureTermination" />
+					<xs:enumeration value="NotApplicable" />
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:simpleType name="MtosiLevelEnum">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="ptpNm" />
+					<xs:enumeration value="ctpNm" />
+					<xs:enumeration value="ftpNm" />
+					<xs:enumeration value="meNm" />
+					<xs:enumeration value="mdNm" />
+					<xs:enumeration value="ehNm" />
+					<xs:enumeration value="eqNm" />
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:complexType name="serviceCharacteristicList">
+				<xs:sequence>
+					<xs:element name="serviceCharacteristics"
+
+						type="tns:serviceCharacteristics" maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="serviceCharacteristics">
+				<xs:sequence>
+					<xs:element name="name" type="xs:string" />
+					<xs:element name="value" type="xs:string" />
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema
+
+			xmlns:tns="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns:S832="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/OperationalAnalysis"
+
+			xmlns:S865="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Parties"
+
+			xmlns:S798="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses"
+
+			xmlns:S93="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Troubles"
+
+			xmlns:S31="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Specifications"
+
+			xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+
+			xmlns:S62="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Parties"
+
+			xmlns:S824="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Interaction"
+
+			xmlns:S787="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/BaseTypes"
+
+			xmlns:S816="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Incidents"
+
+			xmlns:S885="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Users"
+
+			xmlns:ns1="http://schemas.xmlsoap.org/soap/encoding/"
+
+			xmlns:S7="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02"
+
+			xmlns:S801="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations"
+
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:S895="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns:S872="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Resources"
+
+			xmlns:S9="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns="http://schemas.xmlsoap.org/wsdl/"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/OperationalAnalysis">
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations">
+			</xs:import>
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Users">
+			</xs:import>
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Incidents">
+			</xs:import>
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Resources">
+			</xs:import>
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Interaction">
+			</xs:import>
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Parties">
+			</xs:import>
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02">
+			</xs:import>
+			<xs:complexType name="TestInstanceResult">
+				<xs:sequence>
+					<xs:element type="S816:Fault" name="error"
+
+						minOccurs="0">
+					</xs:element>
+					<xs:element
+
+						type="S832:outcomeTestInstanceResultEnum" name="outcome">
+					</xs:element>
+					<xs:element type="S824:BusinessInteractionOutcome"
+
+						name="businessInteractionOutcome" minOccurs="0">
+					</xs:element>
+					<xs:element type="xs:dateTime"
+
+						name="startDateTime">
+					</xs:element>
+					<xs:element type="xs:dateTime"
+
+						name="stopDateTime">
+					</xs:element>
+					<xs:element type="S832:TestResultInformation"
+
+						name="additionalInfo" minOccurs="0" maxOccurs="unbounded">
+					</xs:element>
+					<xs:element type="xs:string" name="faultLocation"
+
+						minOccurs="0">
+					</xs:element>
+					<xs:element type="xs:string"
+
+						name="proposedRepairActions" minOccurs="0">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="TestResultInformation">
+				<xs:sequence>
+					<xs:element type="xs:string" name="name">
+					</xs:element>
+					<xs:element type="S832:TestResultInformationEnum"
+
+						name="value">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="TestInstance">
+				<xs:sequence>
+					<xs:element type="S865:Organisation"
+
+						name="testConductorId" minOccurs="0">
+					</xs:element>
+					<xs:element type="xs:string" name="id" />
+					<xs:element type="S832:TestPerformer"
+
+						name="tarrId">
+					</xs:element>
+					<xs:element type="S832:TestInstanceIdentifier"
+
+						name="testId">
+					</xs:element>
+					<xs:element type="S885:ClientIdentifier"
+
+						name="userId">
+					</xs:element>
+					<xs:element type="S832:TestInstanceResultList"
+
+						name="testInstanceResultList" minOccurs="0">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="TestPerformer">
+				<xs:sequence>
+					<xs:element type="xs:string" name="tarrId">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="TestResultInformationEnum">
+				<xs:choice>
+					<xs:element type="S801:StringCharacteristicEnum"
+
+						name="value" minOccurs="0">
+					</xs:element>
+					<xs:element type="S872:ResourceInstance"
+
+						name="resourceInstance" minOccurs="0">
+					</xs:element>
+					<xs:element type="S801:AttachmentCharacteristicEnum"
+
+						name="specificBase64BinaryParameters" minOccurs="0"
+
+						maxOccurs="unbounded">
+					</xs:element>
+					<xs:element type="S7:AnyResult"
+
+						name="testResultXMLDocument" minOccurs="0"
+
+						maxOccurs="unbounded">
+					</xs:element>
+				</xs:choice>
+			</xs:complexType>
+			<xs:complexType name="TestInstanceIdentifier">
+				<xs:sequence>
+					<xs:element type="xs:string" name="id" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="TestInstanceResultList">
+				<xs:sequence>
+					<xs:element type="S832:TestInstanceResult"
+
+						name="testInstanceResult" maxOccurs="unbounded">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:simpleType name="outcomeTestInstanceResultEnum">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Pass" />
+					<xs:enumeration value="Fail" />
+					<xs:enumeration value="Inconclusive">
+					</xs:enumeration>
+					<xs:enumeration value="PrematureTermination">
+					</xs:enumeration>
+					<xs:enumeration value="TimedOut" />
+				</xs:restriction>
+			</xs:simpleType>
+			<xs:element type="S832:TestInstance" name="testInstance">
+			</xs:element>
+		</xs:schema>
+
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/OperationalAnalysis"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/OperationalAnalysis"
+
+			xmlns:S661="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Incidents"
+
+			xmlns:S669="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Interaction"
+
+			xmlns:S710="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Parties"
+
+			xmlns:S730="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Users"
+
+			xmlns:S646="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations"
+
+			xmlns:S717="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Resources"
+
+			xmlns:S7="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Resources" />
+
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations" />
+
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Parties" />
+
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Interaction" />
+
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Incidents" />
+
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/BaseTypes" />
+
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Users" />
+
+			<xs:import namespace="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02" />
+
+			<xs:complexType name="TestPerformer">
+
+				<xs:sequence>
+
+					<xs:element name="tarrId" type="xs:string"
+
+						minOccurs="1" maxOccurs="1" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:complexType name="TestInstanceIdentifier">
+
+				<xs:sequence>
+
+					<xs:element name="id" type="xs:string" minOccurs="1"
+
+						maxOccurs="1" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:complexType name="TestInstanceResult">
+
+				<xs:sequence>
+
+					<xs:element name="error" type="S661:Fault"
+
+						minOccurs="0" maxOccurs="1" />
+
+					<xs:element name="outcome"
+
+						type="outcomeTestInstanceResultEnum" minOccurs="1" maxOccurs="1" />
+
+					<xs:element name="businessInterationOutcome"
+
+						type="S669:BusinessInteractionOutcome" minOccurs="0"
+
+						maxOccurs="1" />
+
+					<xs:element name="startDateTime" type="xs:dateTime"
+
+						minOccurs="1" maxOccurs="1" />
+
+					<xs:element name="stopDateTime" type="xs:dateTime"
+
+						minOccurs="1" maxOccurs="1" />
+
+					<xs:element name="additionalInfo"
+
+						type="TestResultInformation" minOccurs="0" maxOccurs="unbounded" />
+
+					<xs:element name="faultLocation" type="xs:string"
+
+						minOccurs="0" maxOccurs="1" />
+
+					<xs:element name="proposedRepairActions"
+
+						type="xs:string" minOccurs="0" maxOccurs="1" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:complexType name="TestInstance">
+
+				<xs:sequence>
+
+					<xs:element name="testConductorId"
+
+						type="S710:Organisation" minOccurs="0" maxOccurs="1" />
+
+					<xs:element name="id" type="xs:string" minOccurs="1"
+
+						maxOccurs="1" />
+
+					<xs:element name="tarrId" type="TestPerformer"
+
+						minOccurs="0" maxOccurs="1" />
+
+					<xs:element name="testId"
+
+						type="TestInstanceIdentifier" minOccurs="0" maxOccurs="1" />
+
+					<xs:element name="userId"
+
+						type="S730:ClientIdentifier" minOccurs="1" maxOccurs="1" />
+
+					<xs:element name="testInstanceResultList"
+
+						type="TestInstanceResultList" minOccurs="0" maxOccurs="1" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:complexType name="TestResultInformation">
+
+
+
+				<xs:sequence>
+
+					<xs:element name="name" type="xs:string"
+
+						minOccurs="1" maxOccurs="1" />
+
+					<xs:element name="value"
+
+						type="TestResultInformationEnum" minOccurs="1" maxOccurs="1" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:complexType name="TestResultInformationEnum">
+
+				<xs:choice>
+
+					<xs:element name="value"
+
+						type="S646:StringCharacteristicEnum" minOccurs="0" maxOccurs="1" />
+
+					<xs:element name="resourceInstance"
+
+						type="S717:ResourceInstance" minOccurs="0" maxOccurs="1" />
+
+					<xs:element name="specificBase64BinaryParameters"
+
+						type="S646:AttachmentCharacteristicEnum" minOccurs="0"
+
+						maxOccurs="unbounded" />
+
+					<xs:element type="S7:AnyResult"
+
+						name="testResultXMLDocument" minOccurs="0"
+
+						maxOccurs="unbounded">
+
+					</xs:element>
+
+				</xs:choice>
+
+			</xs:complexType>
+
+			<xs:complexType name="TestInstanceResultList">
+
+				<xs:sequence>
+
+					<xs:element name="testInstanceResult"
+
+						type="TestInstanceResult" minOccurs="1" maxOccurs="unbounded" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:simpleType name="outcomeTestInstanceResultEnum">
+
+				<xs:restriction base="xs:string">
+
+					<xs:enumeration value="Pass" />
+
+					<xs:enumeration value="Fail" />
+
+					<xs:enumeration value="Inconclusive" />
+
+					<xs:enumeration value="PrematureTermination" />
+
+					<xs:enumeration value="TimedOut" />
+
+				</xs:restriction>
+
+			</xs:simpleType>
+
+		</xs:schema>
+
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Resources"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Resources"
+
+			xmlns:S895="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI" />
+
+			<xs:complexType name="ResourceInstance">
+
+				<xs:sequence>
+
+					<xs:element name="managedElement"
+
+						type="S895:ManagedElement" minOccurs="0" maxOccurs="1" />
+
+					<xs:element name="physicalTerminationPoint"
+
+						type="S895:PhysicalTerminationPoint" minOccurs="0" maxOccurs="1" />
+
+					<xs:element name="floatingTerminationPoint"
+
+						type="S895:FloatingTerminationPoint" minOccurs="0" maxOccurs="1" />
+
+					<xs:element name="equipmentHolder"
+
+						type="S895:EquipmentHolder" minOccurs="0" maxOccurs="1" />
+
+					<xs:element name="connectionTerminationPoint"
+
+						type="S895:ConnectionTerminationPoint" minOccurs="0"
+
+						maxOccurs="1" />
+
+					<xs:element name="equipment" type="S895:Equipment"
+
+						minOccurs="0" maxOccurs="1" />
+
+					<xs:element name="type" type="xs:string"
+
+						minOccurs="1" maxOccurs="1" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+		</xs:schema>
+
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Interaction"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Interaction"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+			<xs:complexType name="BusinessInteractionOutcome">
+
+
+
+				<xs:sequence>
+
+					<xs:element name="code" type="xs:string"
+
+						minOccurs="1" maxOccurs="1" />
+
+					<xs:element name="description" type="xs:string"
+
+						minOccurs="0" maxOccurs="1" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+		</xs:schema>
+
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Incidents"
+
+			xmlns="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Incidents"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+			<xs:complexType name="Fault">
+
+				<xs:sequence>
+
+					<xs:element name="reasonCode" type="xs:string"
+
+						minOccurs="0" maxOccurs="1" />
+
+					<xs:element name="reasonCodeText" type="xs:string"
+
+						minOccurs="0" maxOccurs="1" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+		</xs:schema>
+
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Parties"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Parties"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+			<xs:complexType name="Organisation">
+
+
+
+				<xs:sequence>
+
+					<xs:element name="id" type="xs:string" minOccurs="0"
+
+						maxOccurs="1" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+		</xs:schema>
+
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Users"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/Users"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+			<xs:complexType name="ClientIdentifier">
+
+
+
+				<xs:sequence>
+
+					<xs:element name="value" type="xs:string"
+
+						minOccurs="1" maxOccurs="1" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+		</xs:schema>
+
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/BaseTypes" />
+
+			<xs:complexType name="AttachmentCharacteristicEnum">
+
+				<xs:sequence>
+
+					<xs:element name="attachment" type="xs:base64Binary"
+
+						minOccurs="1" maxOccurs="1" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:complexType name="StringCharacteristicEnum">
+
+				<xs:sequence>
+
+					<xs:element name="stringValue" type="xs:string"
+
+						minOccurs="1" maxOccurs="1" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+		</xs:schema>
+
+
+
+		<!-- Do not need this schema to be defined or imported. It is defined just for completeness and consistency ??? -->
+
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/BaseTypes"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+		</xs:schema>
+
+
+
+		<xs:schema
+
+			xmlns:tns="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns:S832="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/OperationalAnalysis"
+
+			xmlns:S865="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Parties"
+
+			xmlns:S798="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses"
+
+			xmlns:S93="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Troubles"
+
+			xmlns:S31="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Specifications"
+
+			xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+
+			xmlns:S62="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Parties"
+
+			xmlns:S824="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Interaction"
+
+			xmlns:S816="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Incidents"
+
+			xmlns:S885="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Users"
+
+			xmlns:S7="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02"
+
+			xmlns:S801="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations"
+
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:S895="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns:S872="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Resources"
+
+			xmlns:S9="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns="http://www.w3.org/2001/XMLSchema"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified"
+
+			targetNamespace="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Parties">
+			<xs:complexType name="PersonName">
+				<xs:sequence>
+					<xs:element type="xs:string" name="title"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:string" name="forename"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:string" name="surname"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ContactDetails">
+				<xs:sequence>
+					<xs:element type="xs:string" name="phoneNumber"
+
+						minOccurs="0" maxOccurs="1" nillable="true">
+					</xs:element>
+					<xs:element type="xs:string"
+
+						name="mobilePhoneNumber" minOccurs="0" maxOccurs="1"
+
+						nillable="true">
+					</xs:element>
+					<xs:element type="xs:string" name="emailAddress"
+
+						minOccurs="0" maxOccurs="1" nillable="true">
+					</xs:element>
+					<xs:element type="xs:string" name="facsimile"
+
+						minOccurs="0" maxOccurs="1" nillable="true">
+					</xs:element>
+					<xs:element type="xs:string" name="pager"
+
+						minOccurs="0" maxOccurs="1" nillable="true">
+					</xs:element>
+					<xs:element type="xs:string"
+
+						name="contactAvailability" minOccurs="0" maxOccurs="1"
+
+						nillable="true">
+					</xs:element>
+					<xs:element type="xs:string" name="contactRole"
+
+						minOccurs="0" maxOccurs="1" nillable="true">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Party">
+				<xs:sequence>
+					<xs:element type="S62:PersonName" name="personName"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="S62:ContactDetails"
+
+						name="contactDetails" minOccurs="1" maxOccurs="1">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema
+
+			xmlns:tns="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns:S832="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/OperationalAnalysis"
+
+			xmlns:S865="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Parties"
+
+			xmlns:S798="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses"
+
+			xmlns:S93="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Troubles"
+
+			xmlns:S31="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Specifications"
+
+			xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+
+			xmlns:S62="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Parties"
+
+			xmlns:S824="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Interaction"
+
+			xmlns:S816="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Incidents"
+
+			xmlns:S885="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Users"
+
+			xmlns:ns1="http://schemas.xmlsoap.org/soap/encoding/"
+
+			xmlns:S7="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02"
+
+			xmlns:S801="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations"
+
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:S895="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns:S872="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Resources"
+
+			xmlns:S9="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns="http://schemas.xmlsoap.org/wsdl/"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Parties">
+			<xs:complexType name="Organisation">
+				<xs:sequence>
+					<xs:element type="xs:string" name="id"
+
+						minOccurs="0">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema
+
+			xmlns:tns="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns:S832="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/OperationalAnalysis"
+
+			xmlns:S865="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Parties"
+
+			xmlns:S798="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses"
+
+			xmlns:S93="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Troubles"
+
+			xmlns:S31="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Specifications"
+
+			xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+
+			xmlns:S62="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Parties"
+
+			xmlns:S824="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Interaction"
+
+			xmlns:S816="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Incidents"
+
+			xmlns:S787="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/BaseTypes"
+
+			xmlns:S885="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Users"
+
+			xmlns:ns1="http://schemas.xmlsoap.org/soap/encoding/"
+
+			xmlns:S7="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02"
+
+			xmlns:S801="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations"
+
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:S895="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns:S872="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Resources"
+
+			xmlns:S9="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns="http://schemas.xmlsoap.org/wsdl/"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations">
+			<xs:complexType name="AttachmentCharacteristicEnum">
+				<xs:sequence>
+					<xs:element type="xs:base64Binary"
+
+						name="attachment">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="StringCharacteristicEnum">
+				<xs:sequence>
+					<xs:element type="xs:string" name="stringValue">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema
+
+			xmlns:tns="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns:S832="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/OperationalAnalysis"
+
+			xmlns:S865="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Parties"
+
+			xmlns:S798="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses"
+
+			xmlns:S93="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Troubles"
+
+			xmlns:S31="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Specifications"
+
+			xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+
+			xmlns:S62="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Parties"
+
+			xmlns:S824="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Interaction"
+
+			xmlns:S816="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Incidents"
+
+			xmlns:S885="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Users"
+
+			xmlns:S7="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02"
+
+			xmlns:S801="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations"
+
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:S895="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns:S872="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Resources"
+
+			xmlns:S9="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns="http://www.w3.org/2001/XMLSchema"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified"
+
+			targetNamespace="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Troubles">
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02">
+			</xs:import>
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Specifications">
+			</xs:import>
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Parties">
+			</xs:import>
+			<xs:complexType name="Impact">
+				<xs:sequence>
+					<xs:element type="xs:string" name="instanceType"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:int" name="affectedInstances"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:int"
+
+						name="potentiallyAffectedInstances" minOccurs="1" maxOccurs="1">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Issue">
+				<xs:sequence>
+					<xs:element type="S31:Instance" name="instance"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:string" name="id" minOccurs="1"
+
+						maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:string" name="description"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:string" name="type"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:string" name="classification"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:string" name="source"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:string" name="status"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:dateTime"
+
+						name="originatedTimestamp" minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:dateTime"
+
+						name="createdTimestamp" minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:dateTime"
+
+						name="lastUpdatedTimestamp" minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:dateTime"
+
+						name="targetCompletionTimestamp" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:dateTime"
+
+						name="closedTimestamp" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:dateTime"
+
+						name="clearedTimestamp" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:dateTime"
+
+						name="restoredTimestamp" minOccurs="0" maxOccurs="1">
+					</xs:element>
+					<xs:element type="S62:Party" name="owner"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="S7:Identifier" name="locationRef"
+
+						minOccurs="0" maxOccurs="1" nillable="true">
+					</xs:element>
+					<xs:element type="S93:Impact" name="impact"
+
+						minOccurs="0" maxOccurs="unbounded" nillable="true">
+					</xs:element>
+					<xs:element type="xs:boolean" name="acknowledged"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema
+
+			xmlns:tns="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns:S832="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/OperationalAnalysis"
+
+			xmlns:S865="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Parties"
+
+			xmlns:S798="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses"
+
+			xmlns:S93="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Troubles"
+
+			xmlns:S31="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Specifications"
+
+			xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+
+			xmlns:S62="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Parties"
+
+			xmlns:S824="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Interaction"
+
+			xmlns:S41="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Interaction"
+
+			xmlns:S816="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Incidents"
+
+			xmlns:S885="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Users"
+
+			xmlns:S7="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02"
+
+			xmlns:S801="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations"
+
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:S895="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns:S872="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Resources"
+
+			xmlns:S9="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns="http://www.w3.org/2001/XMLSchema"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified"
+
+			targetNamespace="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Interaction">
+			<xs:complexType name="BusinessInteractionOutcome">
+				<xs:sequence>
+					<xs:element type="xs:string" name="code"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element
+
+						type="S41:outcomeBusinessInteractionOutcomeEnum" name="outcome"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:string" name="description"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:simpleType
+
+				name="outcomeBusinessInteractionOutcomeEnum">
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="Pass" />
+					<xs:enumeration value="Fail" />
+					<xs:enumeration value="Inconclusive">
+					</xs:enumeration>
+					<xs:enumeration value="TimedOut" />
+					<xs:enumeration value="PrematureTermination">
+					</xs:enumeration>
+					<xs:enumeration value="NotApplicable">
+					</xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:schema>
+		<xs:schema xmlns:tns="http://afm.nat.bt.com/linetest/types"
+
+			xmlns:S832="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/OperationalAnalysis"
+
+			xmlns:S865="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Parties"
+
+			xmlns:S798="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses"
+
+			xmlns:S93="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Troubles"
+
+			xmlns:S31="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Specifications"
+
+			xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+
+			xmlns:S62="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Parties"
+
+			xmlns:S824="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Interaction"
+
+			xmlns:S816="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Incidents"
+
+			xmlns:S885="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Users"
+
+			xmlns:ns1="http://schemas.xmlsoap.org/soap/encoding/"
+
+			xmlns:S7="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02"
+
+			xmlns:S801="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations"
+
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:S895="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI"
+
+			xmlns:S872="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Resources"
+
+			xmlns:S9="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns:S749="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdRequest/OperationalAnalysis"
+
+			xmlns:S566="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdRequest/OperationalAnalysis"
+
+			xmlns:S677="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/OperationalAnalysis"
+
+			xmlns="http://schemas.xmlsoap.org/wsdl/"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified"
+
+			targetNamespace="http://afm.nat.bt.com/linetest/types">
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/OperationalAnalysis">
+			</xs:import>
+
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdRequest/OperationalAnalysis">
+
+			</xs:import>
+
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdRequest/OperationalAnalysis">
+
+			</xs:import>
+
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdResponse/OperationalAnalysis">
+
+			</xs:import>
+			<xs:complexType name="GetSummaryByServiceIdRequest">
+				<xs:sequence>
+					<xs:element name="serviceId" type="xs:string"
+
+						nillable="false" minOccurs="1" />
+					<xs:element name="noOfDays" type="xs:int" />
+					<xs:element name="systemId" type="xs:string"
+
+						nillable="false" minOccurs="1" />
+					<xs:element name="requestId" type="xs:string"
+
+						nillable="false" minOccurs="1" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="GetSummaryByServiceIdResponse">
+				<xs:sequence>
+					<xs:element name="latestTimeStampReceived"
+
+						type="xs:dateTime" nillable="true" minOccurs="0" />
+					<xs:element name="businessFunction" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+					<xs:element name="serviceId" type="xs:string"
+
+						minOccurs="1" />
+					<xs:element name="responseStatus" type="xs:string"
+
+						minOccurs="1" />
+					<xs:element name="exceptionCode" type="xs:int"
+
+						nillable="true" minOccurs="0" />
+					<xs:element name="exceptionMessage" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="GetTestResultByTestIdRequest">
+				<xs:sequence>
+					<xs:element type="xs:string" name="testId"
+
+						minOccurs="1" nillable="true">
+					</xs:element>
+					<xs:element type="xs:string" name="tarrId"
+
+						minOccurs="1" nillable="true">
+					</xs:element>
+					<xs:element type="xs:string" name="systemId"
+
+						minOccurs="1" nillable="false">
+					</xs:element>
+					<xs:element type="xs:string" name="requestId"
+
+						minOccurs="1" nillable="false">
+					</xs:element>
+
+					<xs:element name="testRequestInformationList"
+
+						type="S749:TestSpecIdentifierList" minOccurs="0" maxOccurs="1" />
+					<xs:element name="baseline" type="xs:string"
+
+						minOccurs="0">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="GetTestResultByTestIdResponse">
+				<xs:sequence>
+					<xs:element type="xs:string" name="responseStatus"
+
+						minOccurs="1">
+					</xs:element>
+					<xs:element type="xs:int" name="exceptionCode"
+
+						minOccurs="0" nillable="true">
+					</xs:element>
+					<xs:element type="xs:string" name="exceptionMessage"
+
+						minOccurs="0" nillable="true">
+					</xs:element>
+					<xs:element type="S832:TestInstance"
+
+						name="testInstance" minOccurs="0" nillable="true"
+
+						maxOccurs="unbounded">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="GetTestResultByMortIdRequest">
+
+				<xs:sequence>
+
+					<xs:element type="xs:string" name="serviceId"
+
+						minOccurs="1" nillable="false" />
+
+					<xs:element type="xs:string" name="serviceIdType" />
+
+					<xs:element type="xs:string" name="systemId"
+
+						minOccurs="1" nillable="false" />
+
+					<xs:element type="xs:string" name="requestId"
+
+						minOccurs="1" nillable="false" />
+
+					<xs:element name="testRequestInformationList"
+
+						type="S566:TestSpecIdentifierList" minOccurs="0" maxOccurs="1" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:complexType name="GetTestResultByMortIdResponse">
+
+				<xs:sequence>
+
+					<xs:element type="xs:string" name="responseStatus"
+
+						minOccurs="1">
+
+					</xs:element>
+
+					<xs:element type="xs:int" name="exceptionCode"
+
+						minOccurs="0" nillable="true">
+
+					</xs:element>
+
+					<xs:element type="xs:string" name="exceptionMessage"
+
+						minOccurs="0" nillable="true">
+
+					</xs:element>
+
+					<xs:element type="S677:TestInstance"
+
+						name="testInstance" minOccurs="0" nillable="true"
+
+						maxOccurs="unbounded">
+
+					</xs:element>
+
+				</xs:sequence>
+
+			</xs:complexType>
+			<xs:complexType
+
+				name="GetBaselineTestResultByServiceIdRequest">
+				<xs:sequence>
+					<xs:element name="serviceId" type="xs:string" />
+					<xs:element name="systemId" type="xs:string"
+
+						nillable="false" />
+					<xs:element name="requestId" type="xs:string"
+
+						nillable="false" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType
+
+				name="GetBaselineTestResultByServiceIdResponse">
+				<xs:sequence>
+					<xs:element name="responseStatus" type="xs:string" />
+					<xs:element name="exceptionCode" type="xs:int"
+
+						nillable="true" minOccurs="0" />
+					<xs:element name="exceptionMessage" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+					<xs:element name="testInstance"
+
+						type="S832:TestInstance" nillable="true" minOccurs="0" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:element type="tns:GetTestResultByTestIdRequest"
+
+				name="getTestResultByTestIdRequest">
+			</xs:element>
+			<xs:element type="tns:GetTestResultByTestIdResponse"
+
+				name="getTestResultByTestIdResponse">
+			</xs:element>
+
+			<xs:element type="tns:GetTestResultByMortIdRequest"
+
+				name="getTestResultByMortIdRequest">
+
+			</xs:element>
+
+			<xs:element type="tns:GetTestResultByMortIdResponse"
+
+				name="getTestResultByMortIdResponse">
+
+			</xs:element>
+			<xs:element name="getSummaryByServiceIdRequest"
+
+				type="tns:GetSummaryByServiceIdRequest" />
+			<xs:element name="getSummaryByServiceIdResponse"
+
+				type="tns:GetSummaryByServiceIdResponse" />
+			<xs:element name="getBaselineTestResultByServiceIdRequest"
+
+				type="tns:GetBaselineTestResultByServiceIdRequest" />
+			<xs:element name="getBaselineTestResultByServiceIdResponse"
+
+				type="tns:GetBaselineTestResultByServiceIdResponse" />
+		</xs:schema>
+		<xs:schema
+
+			xmlns:tns="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns:S832="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/OperationalAnalysis"
+
+			xmlns:S865="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Parties"
+
+			xmlns:S798="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses"
+
+			xmlns:S93="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Troubles"
+
+			xmlns:S31="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Specifications"
+
+			xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+
+			xmlns:S62="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Parties"
+
+			xmlns:S824="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Interaction"
+
+			xmlns:S816="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Incidents"
+
+			xmlns:S885="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Users"
+
+			xmlns:S7="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02"
+
+			xmlns:S801="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations"
+
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:S895="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns:S872="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Resources"
+
+			xmlns:S9="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns="http://www.w3.org/2001/XMLSchema"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified"
+
+			targetNamespace="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Specifications">
+			<xs:complexType name="Instance">
+				<xs:sequence>
+					<xs:element type="xs:string" name="type"
+
+						minOccurs="1" maxOccurs="1">
+					</xs:element>
+					<xs:element type="xs:string" name="id" minOccurs="1"
+
+						maxOccurs="1">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema
+
+			xmlns:tns="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns:S832="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/OperationalAnalysis"
+
+			xmlns:S865="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Parties"
+
+			xmlns:S798="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses"
+
+			xmlns:S93="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Troubles"
+
+			xmlns:S31="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Specifications"
+
+			xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+
+			xmlns:S62="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Parties"
+
+			xmlns:S824="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Interaction"
+
+			xmlns:S816="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Incidents"
+
+			xmlns:S885="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Users"
+
+			xmlns:ns1="http://schemas.xmlsoap.org/soap/encoding/"
+
+			xmlns:S7="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02"
+
+			xmlns:S801="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations"
+
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:S895="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns:S872="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Resources"
+
+			xmlns:S9="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns="http://schemas.xmlsoap.org/wsdl/"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Interaction">
+			<xs:complexType name="BusinessInteractionOutcome">
+				<xs:sequence>
+					<xs:element type="xs:string" name="code">
+					</xs:element>
+					<xs:element type="xs:string" name="description"
+
+						minOccurs="0">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema
+
+			xmlns:tns="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns:S832="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/OperationalAnalysis"
+
+			xmlns:S865="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Parties"
+
+			xmlns:S798="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses"
+
+			xmlns:S93="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Troubles"
+
+			xmlns:S31="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Specifications"
+
+			xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+
+			xmlns:S62="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Parties"
+
+			xmlns:S824="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Interaction"
+
+			xmlns:S816="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Incidents"
+
+			xmlns:S885="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Users"
+
+			xmlns:ns1="http://schemas.xmlsoap.org/soap/encoding/"
+
+			xmlns:S7="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02"
+
+			xmlns:S801="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations"
+
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:S895="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns:S872="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Resources"
+
+			xmlns:S9="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns="http://schemas.xmlsoap.org/wsdl/"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI">
+			<xs:complexType name="FloatingTerminationPoint">
+				<xs:sequence>
+					<xs:element type="S895:NamingAttribute"
+
+						name="name">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ConnectionTerminationPoint">
+				<xs:sequence>
+					<xs:element type="S895:NamingAttribute"
+
+						name="name">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="NamingAttribute">
+				<xs:sequence>
+					<xs:element type="xs:string" name="mdNm"
+
+						minOccurs="0">
+					</xs:element>
+					<xs:element type="xs:string" name="meNm"
+
+						minOccurs="0">
+					</xs:element>
+					<xs:element type="xs:string" name="ptpNm"
+
+						minOccurs="0">
+					</xs:element>
+					<xs:element type="xs:string" name="ftpNm"
+
+						minOccurs="0">
+					</xs:element>
+					<xs:element type="xs:string" name="ehNm"
+
+						minOccurs="0">
+					</xs:element>
+					<xs:element type="xs:string" name="ctpNm"
+
+						minOccurs="0">
+					</xs:element>
+					<xs:element type="xs:string" name="eqNm"
+
+						minOccurs="0">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="Equipment">
+				<xs:sequence>
+					<xs:element type="S895:NamingAttribute"
+
+						name="name">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="ManagedElement">
+				<xs:sequence>
+					<xs:element type="S895:NamingAttribute"
+
+						name="name">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="PhysicalTerminationPoint">
+				<xs:sequence>
+					<xs:element type="S895:NamingAttribute"
+
+						name="name">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="EquipmentHolder">
+				<xs:sequence>
+					<xs:element type="S895:NamingAttribute"
+
+						name="name">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema
+
+			xmlns:tns="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns:S832="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/OperationalAnalysis"
+
+			xmlns:S865="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Parties"
+
+			xmlns:S798="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses"
+
+			xmlns:S93="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Troubles"
+
+			xmlns:S31="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Specifications"
+
+			xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+
+			xmlns:S62="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02/Parties"
+
+			xmlns:S824="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Interaction"
+
+			xmlns:S816="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Incidents"
+
+			xmlns:S885="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Users"
+
+			xmlns:ns1="http://schemas.xmlsoap.org/soap/encoding/"
+
+			xmlns:S7="http://capabilities.nat.bt.com/wsdl/ManageAssociation/2006/02"
+
+			xmlns:S801="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/CoreClasses/EnumeratedClasses/CharacteristicEnumerations"
+
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns:S895="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI"
+
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+
+			xmlns:S872="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Resources"
+
+			xmlns:S9="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01"
+
+			xmlns="http://schemas.xmlsoap.org/wsdl/"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdResponse/Resources">
+			<xs:import
+
+				namespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/MTOSI">
+			</xs:import>
+			<xs:complexType name="ResourceInstance">
+				<xs:sequence>
+					<xs:element type="S895:ManagedElement"
+
+						name="managedElement" minOccurs="0">
+					</xs:element>
+					<xs:element type="S895:PhysicalTerminationPoint"
+
+						name="physicalTerminationPoint" minOccurs="0">
+					</xs:element>
+					<xs:element type="S895:FloatingTerminationPoint"
+
+						name="floatingTerminationPoint" minOccurs="0">
+					</xs:element>
+					<xs:element type="S895:EquipmentHolder"
+
+						name="equipmentHolder" minOccurs="0">
+					</xs:element>
+					<xs:element type="S895:ConnectionTerminationPoint"
+
+						name="connectionTerminationPoint" minOccurs="0">
+					</xs:element>
+					<xs:element type="S895:Equipment" name="equipment"
+
+						minOccurs="0">
+					</xs:element>
+					<xs:element type="xs:string" name="type">
+					</xs:element>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:schema>
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			targetNamespace="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01">
+			<xs:element name="GetSummaryByServiceId">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="in" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="GetSummaryByServiceIdResponse">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="out" type="xs:string" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:schema>
+
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdRequest/OperationalAnalysis"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByTestIdRequest/OperationalAnalysis"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+			<xs:complexType name="TestSpecIdentifier">
+
+				<xs:sequence>
+
+					<xs:element name="name" type="xs:string"
+
+						minOccurs="1" maxOccurs="1" />
+
+					<xs:element name="value" type="xs:string"
+
+						minOccurs="1" maxOccurs="1" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:complexType name="TestSpecIdentifierList">
+
+				<xs:sequence>
+
+					<xs:element name="testSpecIdentifier"
+
+						type="TestSpecIdentifier" minOccurs="1" maxOccurs="unbounded" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+		</xs:schema>
+
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdRequest/OperationalAnalysis"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/2007/08/01/CCM/GetTestResultByMortIdRequest/OperationalAnalysis"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+			<xs:complexType name="TestSpecIdentifier">
+
+				<xs:sequence>
+
+					<xs:element name="name" type="xs:string"
+
+						minOccurs="1" maxOccurs="1" />
+
+					<xs:element name="value" type="xs:string"
+
+						minOccurs="1" maxOccurs="1" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:complexType name="TestSpecIdentifierList">
+
+				<xs:sequence>
+
+					<xs:element name="testSpecIdentifier"
+
+						type="TestSpecIdentifier" minOccurs="1" maxOccurs="unbounded" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+		</xs:schema>
+
+		<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+			xmlns="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/gtcs/diagTestDetails"
+
+			targetNamespace="http://capabilities.nat.bt.com/xsd/ManageNetworkAndServiceDiagnostics/gtcs/diagTestDetails"
+
+			elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+			<xs:element name="diagnosticTestDetails"
+
+				type="DiagnosticTestDetails">
+
+			</xs:element>
+
+			<xs:complexType name="DiagnosticTestDetails">
+
+				<xs:sequence>
+
+					<xs:element name="generalTestInfo"
+
+						type="GeneralTestInfo" nillable="false" />
+
+					<xs:element name="testConfigInfo"
+
+						type="TestConfigInfo" nillable="false" />
+
+					<xs:element name="diagnosticTestResults"
+
+						type="DiagnosticTestResults" nillable="false" />
+
+					<xs:element name="lineLossResults"
+
+						type="LineLossMeasure" nillable="true" minOccurs="0" />
+
+					<xs:element name="subTest" type="SubTestResult"
+
+						nillable="true" minOccurs="0" maxOccurs="unbounded" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:complexType name="GeneralTestInfo">
+
+				<xs:sequence>
+
+					<xs:element name="testCategory" type="xs:string"
+
+						nillable="false" />
+
+					<xs:element name="testConductorSPGroup"
+
+						type="xs:string" nillable="true" minOccurs="0" />
+
+					<xs:element name="MORT" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="testAlgVersion" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="faultType" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="intrusionConsent" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="invokeId" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="testContext" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="businessFunction" type="xs:string"
+
+						minOccurs="0" />
+
+					<xs:element name="faultOrJobReferenceNo"
+
+						type="xs:string" minOccurs="0" />
+
+					<xs:element name="pushbackIndicator"
+
+						type="xs:string" minOccurs="0" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:complexType name="TestConfigInfo">
+
+				<xs:sequence>
+
+					<xs:element name="circuit" type="Circuit" />
+
+					<xs:element name="techMarker" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="NTEType" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="cssId" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="nni" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="eqptNo" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="fieldBuildId" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="TAMID" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="TAMLinePortId" type="xs:int"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="testDN" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="TDNNNI" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="TDNEqptNo" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="DPType" type="xs:string"
+
+						minOccurs="0" />
+
+					<xs:element name="DPClassification" minOccurs="0">
+
+						<xs:simpleType>
+
+							<xs:restriction base="xs:string">
+
+								<xs:enumeration value="Internal" />
+
+								<xs:enumeration value="External" />
+
+							</xs:restriction>
+
+						</xs:simpleType>
+
+					</xs:element>
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:complexType name="DiagnosticTestResults">
+
+				<xs:sequence>
+
+					<xs:element name="diagnosisCode" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="diagnosisText" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="testDuration" type="xs:int"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="lineSignatureCode"
+
+						type="xs:string" nillable="true" minOccurs="0" />
+
+					<xs:element name="lineSignatureText"
+
+						type="xs:string" nillable="true" minOccurs="0" />
+
+					<xs:element name="termFlag" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="terminationCode" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="terminationText" type="xs:string"
+
+						nillable="true" minOccurs="0" />
+
+					<xs:element name="faultStatementCode"
+
+						type="xs:string" nillable="true" minOccurs="0" />
+
+					<xs:element name="faultStatementText"
+
+						type="xs:string" nillable="true" minOccurs="0" />
+
+					<xs:element name="lineTestData" type="LineTestData"
+
+						minOccurs="0" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:complexType name="LineTestData">
+
+				<xs:sequence>
+
+					<xs:element name="distanceToFault" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="cableLength" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="acVoltageAEth" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="acVoltageBEth" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="acVoltageAB" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="dcVoltageAEth" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="dcVoltageBEth" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="dcVoltageBA" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="dcCurrentAB" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="dcCurrentBA" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="resAEth" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="resBEth" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="resAB" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="resBA" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="resABatt" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="resBBatt" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="capAEth" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="capBEth" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="capAB" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="capBalance" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="exchBatt" minOccurs="0">
+
+						<xs:complexType>
+
+							<xs:sequence>
+
+								<xs:element name="testMeasure"
+
+									type="LineTestMeasure" />
+
+							</xs:sequence>
+
+						</xs:complexType>
+
+					</xs:element>
+
+					<xs:element name="celerityTestMeasures"
+
+						type="CelerityTestMeasure" nillable="true" minOccurs="0"
+
+						maxOccurs="20" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:complexType name="LineTestMeasure">
+
+				<xs:attribute name="Name" type="xs:string"
+
+					use="optional" />
+
+				<xs:attribute name="Unit" type="xs:string"
+
+					use="optional" />
+
+				<xs:attribute name="Status" type="xs:string"
+
+					use="optional">
+
+					<xs:annotation>
+
+						<xs:documentation>
+
+							Can have values "Valid", "NoMeasurement" and
+
+							"GreaterThanLimit"
+
+						</xs:documentation>
+
+					</xs:annotation>
+
+				</xs:attribute>
+
+				<xs:attribute name="StringValue" type="xs:string"
+
+					use="optional" />
+
+				<xs:attribute name="NumericValue" type="xs:string"
+
+					use="optional" />
+
+			</xs:complexType>
+
+			<xs:complexType name="LineLossMeasure">
+
+				<xs:sequence>
+
+					<xs:element name="baseLoss" type="xs:string" />
+
+					<xs:element name="baseLossTestDate"
+
+						type="xs:string" />
+
+					<xs:element name="currentLoss" type="xs:string" />
+
+					<xs:element name="currentLossTestDate"
+
+						type="xs:string" />
+
+					<xs:element name="degradationIndicator"
+
+						type="xs:string" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:complexType name="Circuit">
+
+				<xs:sequence>
+
+					<xs:element name="directoryNumber" type="xs:string"
+
+						nillable="true" minOccurs="0">
+
+						<xs:annotation>
+
+							<xs:documentation>
+
+								Telephone number
+
+							</xs:documentation>
+
+						</xs:annotation>
+
+					</xs:element>
+
+					<xs:element name="PBXLineNumber" type="xs:int"
+
+						nillable="true" minOccurs="0">
+
+						<xs:annotation>
+
+							<xs:documentation>
+
+								PBX line number. Set to '0' in case of
+
+								non-PBX lines
+
+							</xs:documentation>
+
+						</xs:annotation>
+
+					</xs:element>
+
+					<xs:element name="serviceId" type="xs:string"
+
+						nillable="true" minOccurs="0">
+
+						<xs:annotation>
+
+							<xs:documentation>MPF ID.</xs:documentation>
+
+						</xs:annotation>
+
+					</xs:element>
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:complexType name="CelerityTestMeasure">
+
+				<xs:sequence>
+
+					<xs:element name="serviceBinNo" type="xs:int"
+
+						nillable="false" />
+
+					<xs:element name="sqIL" type="xs:string"
+
+						nillable="false" />
+
+					<xs:element name="sqColour" type="xs:int" />
+
+					<xs:element name="sqReason" type="xs:int" />
+
+				</xs:sequence>
+
+			</xs:complexType>
+
+			<xs:complexType name="SubTestResult">
+
+				<xs:sequence>
+
+					<xs:element name="subTestParameter"
+
+						type="SubTestParameter" minOccurs="0" maxOccurs="unbounded" />
+
+				</xs:sequence>
+
+				<xs:attribute name="testName" type="xs:string" />
+
+				<xs:attribute name="testId" type="xs:string" />
+
+			</xs:complexType>
+
+			<xs:complexType name="SubTestParameter">
+
+				<xs:attribute name="name" type="xs:string" />
+
+				<xs:attribute name="value" type="xs:string" />
+
+			</xs:complexType>
+
+		</xs:schema>
+
+	</types>
+	<message name="GetTestResultByTestId">
+		<part name="input" element="partns:getTestResultByTestIdRequest"
+
+			xmlns:partns="http://afm.nat.bt.com/linetest/types" />
+	</message>
+	<message name="GetTestResultByTestIdResponse">
+		<part name="output"
+
+			element="partns:getTestResultByTestIdResponse"
+
+			xmlns:partns="http://afm.nat.bt.com/linetest/types" />
+	</message>
+
+	<message name="GetTestResultByMortId">
+
+		<part name="input" element="partns:getTestResultByMortIdRequest"
+
+			xmlns:partns="http://afm.nat.bt.com/linetest/types" />
+
+	</message>
+
+	<message name="GetTestResultByMortIdResponse">
+
+		<part name="output"
+
+			element="partns:getTestResultByMortIdResponse"
+
+			xmlns:partns="http://afm.nat.bt.com/linetest/types" />
+
+	</message>
+	<message name="GetSummaryByServiceIdRequest">
+		<part name="input" element="partns:getSummaryByServiceIdRequest"
+
+			xmlns:partns="http://afm.nat.bt.com/linetest/types" />
+	</message>
+	<message name="GetSummaryByServiceIdResponse">
+		<part name="output"
+
+			element="partns:getSummaryByServiceIdResponse"
+
+			xmlns:partns="http://afm.nat.bt.com/linetest/types" />
+	</message>
+	<message name="GetBaselineTestResultByServiceIdRequest">
+		<part name="input"
+
+			element="partns:getBaselineTestResultByServiceIdRequest"
+
+			xmlns:partns="http://afm.nat.bt.com/linetest/types" />
+	</message>
+	<message name="GetBaselineTestResultByServiceIdResponse">
+		<part name="output"
+
+			element="partns:getBaselineTestResultByServiceIdResponse"
+
+			xmlns:partns="http://afm.nat.bt.com/linetest/types" />
+	</message>
+	<portType name="GetTestResultPort">
+		<operation name="GetTestResultByTestId">
+			<input message="tns:GetTestResultByTestId" />
+			<output message="tns:GetTestResultByTestIdResponse">
+			</output>
+		</operation>
+
+		<operation name="GetTestResultByMortId">
+
+			<input message="tns:GetTestResultByMortId" />
+
+			<output message="tns:GetTestResultByMortIdResponse" />
+
+		</operation>
+		<operation name="GetSummaryByServiceId">
+			<input message="tns:GetSummaryByServiceIdRequest" />
+			<output message="tns:GetSummaryByServiceIdResponse" />
+		</operation>
+		<operation name="GetBaselineTestResultByServiceId">
+			<input
+
+				message="tns:GetBaselineTestResultByServiceIdRequest" />
+			<output
+
+				message="tns:GetBaselineTestResultByServiceIdResponse" />
+		</operation>
+	</portType>
+	<binding name="GetTestResultBinding"
+
+		type="tns:GetTestResultPort">
+		<soap:binding style="document"
+
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="GetTestResultByTestId">
+			<soap:operation
+
+				soapAction="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01/GetTestResultByTestId"
+
+				style="document" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+
+		<operation name="GetTestResultByMortId">
+
+			<soap:operation
+
+				soapAction="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01/GetTestResultByMortId"
+
+				style="document" />
+
+			<input>
+
+				<soap:body use="literal" />
+
+			</input>
+
+			<output>
+
+				<soap:body use="literal" />
+
+			</output>
+
+		</operation>
+		<operation name="GetSummaryByServiceId">
+			<soap:operation
+
+				soapAction="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01/GetSummaryByServiceId"
+
+				style="document" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+		<operation name="GetBaselineTestResultByServiceId">
+			<soap:operation
+
+				soapAction="http://capabilities.nat.bt.com/wsdl/ManageNetworkAndServiceDiagnostics/2007/08/01/GetBaselineTestResultByServiceId"
+
+				style="document" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+	</binding>
+	<service name="GetTestResultService">
+		<port name="GetTestResultPort"
+
+			binding="tns:GetTestResultBinding">
+			<soap:address
+
+				location="http://hws042a002:61005/GetTestResults/GetTestResults" />
+		</port>
+	</service>
+</definitions>

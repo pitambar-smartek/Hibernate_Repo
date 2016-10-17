@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//src/com/ysreddy/shadi/beans/Person.java=UTF-8
+encoding//src/com/ysreddy/shadi/beans/SearchCriteria.java=UTF-8
+encoding//src/com/ysreddy/shadi/service/MatchImpl.java=UTF-8
+encoding//src/com/ysreddy/shadi/service/MatchImplService.java=UTF-8
+encoding//src/com/ysreddy/shadi/service/MatchImplServiceLocator.java=UTF-8
+encoding//src/com/ysreddy/shadi/service/MatchImplSoapBindingImpl.java=UTF-8
+encoding//src/com/ysreddy/shadi/service/MatchImplSoapBindingSkeleton.java=UTF-8
+encoding//src/com/ysreddy/shadi/service/MatchImplSoapBindingStub.java=UTF-8

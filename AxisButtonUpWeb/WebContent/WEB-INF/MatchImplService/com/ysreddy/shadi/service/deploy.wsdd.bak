@@ -1,0 +1,45 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from MatchImplService WSDL service -->
+
+  <service name="MatchImpl" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://service.shadi.ysreddy.com"/>
+      <parameter name="wsdlServiceElement" value="MatchImplService"/>
+      <parameter name="schemaQualified" value="http://beans.shadi.ysreddy.com,http://service.shadi.ysreddy.com"/>
+      <parameter name="wsdlServicePort" value="MatchImpl"/>
+      <parameter name="className" value="com.ysreddy.shadi.service.MatchImplSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="MatchImpl"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="getRichMatch" qname="operNS:getRichMatch" xmlns:operNS="http://service.shadi.ysreddy.com" returnQName="retNS:getRichMatchReturn" xmlns:retNS="http://service.shadi.ysreddy.com" returnType="rtns:Person" xmlns:rtns="http://beans.shadi.ysreddy.com" soapAction="" >
+        <parameter qname="pns:criteria" xmlns:pns="http://service.shadi.ysreddy.com" type="tns:SearchCriteria" xmlns:tns="http://beans.shadi.ysreddy.com"/>
+      </operation>
+      <parameter name="allowedMethods" value="getRichMatch"/>
+
+      <typeMapping
+        xmlns:ns="http://beans.shadi.ysreddy.com"
+        qname="ns:SearchCriteria"
+        type="java:com.ysreddy.shadi.beans.SearchCriteria"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+      <typeMapping
+        xmlns:ns="http://beans.shadi.ysreddy.com"
+        qname="ns:Person"
+        type="java:com.ysreddy.shadi.beans.Person"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://service.shadi.ysreddy.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://service.shadi.ysreddy.com" xmlns:intf="http://service.shadi.ysreddy.com" xmlns:tns1="http://beans.shadi.ysreddy.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://service.shadi.ysreddy.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://beans.shadi.ysreddy.com"/>
+   <element name="getRichMatch">
+    <complexType>
+     <sequence>
+      <element name="criteria" type="tns1:SearchCriteria"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getRichMatchResponse">
+    <complexType>
+     <sequence>
+      <element name="getRichMatchReturn" type="tns1:Person"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://beans.shadi.ysreddy.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <complexType name="SearchCriteria">
+    <sequence>
+     <element name="age" type="xsd:int"/>
+     <element name="color" nillable="true" type="xsd:string"/>
+     <element name="salary" type="xsd:double"/>
+    </sequence>
+   </complexType>
+   <complexType name="Person">
+    <sequence>
+     <element name="city" nillable="true" type="xsd:string"/>
+     <element name="name" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getRichMatchRequest">
+
+      <wsdl:part element="impl:getRichMatch" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getRichMatchResponse">
+
+      <wsdl:part element="impl:getRichMatchResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="MatchImpl">
+
+      <wsdl:operation name="getRichMatch">
+
+         <wsdl:input message="impl:getRichMatchRequest" name="getRichMatchRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getRichMatchResponse" name="getRichMatchResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="MatchImplSoapBinding" type="impl:MatchImpl">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getRichMatch">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getRichMatchRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getRichMatchResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="MatchImplService">
+
+      <wsdl:port binding="impl:MatchImplSoapBinding" name="MatchImpl">
+
+         <wsdlsoap:address location="http://localhost:8084/AxisButtonUpWeb/services/MatchImpl"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

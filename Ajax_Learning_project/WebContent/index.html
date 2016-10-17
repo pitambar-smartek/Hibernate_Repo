@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+   function ajxFun(){
+     var httReq;
+     if(window.XMLHttpRequest){
+     httReq=new XMLHttpRequest();
+     //alert("ram");
+     
+     }else {
+     httReq=ActiveXObject("Microsoft.XMLHTTP");
+     alert("sita");
+     }
+     httReq.onreadystatechange=function();
+     if(httReq.readyState==4 && httpReq.status==200){
+      document.getElementById("myid").innerHTML=httpReq.responseText;
+     }
+     
+       
+     
+     httReq.open("GET", "./ajxServlet", "true");
+     httpReq.send();
+     
+   }
+</script>
+</head>
+<body>
+<div id="myid">
+Hi,pitambar is here
+</div>
+<input type="button" value="OnClickEvent"  onclick="ajxFun()" />
+</body>
+</html>

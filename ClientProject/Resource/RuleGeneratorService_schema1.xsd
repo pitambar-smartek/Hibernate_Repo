@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://util.loginapp.nic.in/" targetNamespace="http://util.loginapp.nic.in/" version="1.0">
+
+  <xs:element name="sendData" type="tns:sendData"/>
+
+  <xs:element name="sendDataResponse" type="tns:sendDataResponse"/>
+
+  <xs:complexType name="sendData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sendDataResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:output"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="output">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="acts" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

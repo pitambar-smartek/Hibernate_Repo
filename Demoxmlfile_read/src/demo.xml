@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root 
+xmlns:h="http://www.w3.org.TR/html4/"
+xmlns:f="http://www.pita.com/furniture">
+  <h:table>
+     <h:tr>
+     <h:td>APPle</h:td>
+     <h:td>banana</h:td>
+     </h:tr>     
+  </h:table>
+  <f:table>
+    <f:name>mytable</f:name>
+    <f:width>12</f:width>
+    <f:length>12</f:length>
+  </f:table>
+
+</root>

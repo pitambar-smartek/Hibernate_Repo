@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<name>
+			<firstname>pitambar</firstname>
+			<middlename id="ddd">pm</middlename>
+			<lastname>mohanty</lastname>
+		</name><address>bishnuchakra</address><empid>101</empid>
+	<name>
+			<firstname>chintu</firstname>
+			<middlename id="ddd">cg</middlename>
+			<lastname>gouda</lastname>
+		</name><address>boripadar</address><empid>102</empid>
+	<name>
+			<firstname>Bapi</firstname>
+			<middlename id="rampuri">bb</middlename>
+			<lastname>behera</lastname>
+		</name><address>berhampur</address><empid>103</empid>
